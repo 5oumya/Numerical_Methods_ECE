@@ -27,12 +27,12 @@ int main ()
     h = a[1][0]-a[0][0];
     r=(f-a[0][0])/h;
     y=a[0][1];
-    d=r,  fact=1;
+    d=r ;  fact=1;
     // Calculation
     for(j=2;j<=n;j++)
     {
         y += (d*a[0][j])/fact;
-        d=d*(d-(j-1));
+        d=d*(r-(j-1));
         fact *= j;
     }
     //output
