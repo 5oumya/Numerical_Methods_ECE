@@ -25,10 +25,6 @@ int main ()
     // Printing the difference table
     printf("\nDifference Table:\n");
     printf(" x\t   y\n");
-    // for (j = 2; j < n + 1; j++)
-    //     printf("\tΔ^%d y", j - 1);
-    // printf("\n");
-
     for (i = 0; i < n; i++) {
         printf("%0.2f", a[i][0]);
         for (j = 1; j < n - i + 1; j++) {
@@ -52,7 +48,6 @@ int main ()
         d=d*(r+(j-1));
         fact= fact*j;
         j++;
-        printf("Done");
     }
     //output
     printf("For the value of x = %0.3f \nThe value is %0.3f.",f,y);
