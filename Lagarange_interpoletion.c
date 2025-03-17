@@ -16,15 +16,15 @@ int main()
     sum=0; temp= 1;
     for (i=0;i<n;i++)
     {
-        temp=1;
+        temp=1;  // for each iteration put temp =1.
         for(j=0;j<n;j++)
         {
-            if(j!=i)
+            if(j!=i) 
             {
-                temp=temp*(f-x[j])/(x[i]-x[j]);
+                temp=temp*(f-x[j])/(x[i]-x[j]); //updating the factors value
             }
         }
-        sum = sum + temp*y[i];
+        sum = sum + temp*y[i]; // updating the result for each iteration.
     }
-    printf("For the value of x = %0.3f \nThe value is %0.3f.",f,sum);
+    printf("For the value of x = %0.3f \nThe value is %0.3f.",f,sum); // print the result. 
 }
