@@ -16,9 +16,9 @@ int main ()
     //create the difference table
     for(j=2;j<n+1;j++)
     {
-        for(i=0;i<n-j+1;i++)
+        for(i=n-1;i>j-2;i--)
         {
-            a[i][j]=a[i+1][j-1]-a[i][j-1];
+            a[i][j]=a[i][j-1]-a[i-1][j-1];
         }
     }
 
@@ -27,7 +27,7 @@ int main ()
     printf(" x\t   y\n");
     for (i = 0; i < n; i++) {
         printf("%0.2f", a[i][0]);
-        for (j = 1; j < n - i + 1; j++) {
+        for (j = 1; j < n ; j++) {
             printf("\t%0.2f", a[i][j]);
         }
         printf("\n");
@@ -42,12 +42,11 @@ int main ()
     y=a[n-1][1];
     d=r ;  fact=1; j=2;
     // Calculation
-    for(i=n-2;i>=0;i--)
+    for(j=2;j<n+1;j++)
     {
-        y = y+(d*a[i][j])/fact;
-        d=d*(r+(j-1));
-        fact= fact*j;
-        j++;
+        y=y+d*a[n-1][j]/fact;
+        d=d*(r+j-1);
+        fact=fact*j;
     }
     //output
     printf("For the value of x = %0.3f \nThe value is %0.3f.",f,y);
