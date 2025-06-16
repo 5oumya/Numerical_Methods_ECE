@@ -27,7 +27,7 @@ int main ()
     printf(" x\t   y\n");
     for (i = 0; i < n; i++) {
         printf("%0.2f", a[i][0]);
-        for (j = 1; j < n ; j++) {
+        for (j = 1; j < n+1 ; j++) {
             printf("\t%0.2f", a[i][j]);
         }
         printf("\n");
